@@ -18,7 +18,6 @@
 
 <body>
 	<div class="container centered">
-
 		<br />
 		<br />
 
@@ -30,7 +29,6 @@
 				<div class="title">
 					Yosi Spring
 				</div>
-				<hr />
 			</div>
 			<div class="block box" style="background-color:#1d1d1d;">
 				• Creator of Platform Fighter Engine
@@ -51,7 +49,6 @@
 		<div class="block box">
 			<div class="block subtitle">
 				Projects
-				<hr />
 			</div>
 
 			<div class="block message">
@@ -63,6 +60,7 @@
 					</div>
 				</a>
 				<div class="message-body">
+					<img src="./pfe.gif" />
 					A framework I started that allows anyone to create their own Platform Fighter in GameMaker!
 				</div>
 			</div>
@@ -76,6 +74,7 @@
 					</div>
 				</a>
 				<div class="message-body">
+					<img src="./rivals.png" />
 					I helped with programming on this game (specifically netcode and advanced features).
 				</div>
 			</div>
@@ -89,6 +88,7 @@
 					</div>
 				</a>
 				<div class="message-body">
+					<img src="./gm48.gif" />
 					I've participated in the 48-hour game jam "GM48" over 19 times, creating short games such as
 					<a href="https://gm48.net/g/2042" target="_blank" rel="noopener"><b>Wizard School </b></a>
 					<img src="./external_link.png" class="link" />,
@@ -103,7 +103,6 @@
 		<div class="block box">
 			<div class="block subtitle">
 				Social Media
-				<hr />
 			</div>
 
 			<div class="block message">
@@ -173,9 +172,18 @@
 		text-rendering: optimizeLegibility;
 	}
 
+	body {
+		padding: 0;
+		margin: 0;
+		background-image: url("background3.png");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
 	.container {
 		color: #cfcfcf;
-		background-color: #3d3d3d;
+		background-color: #3d3d3d00;
 		font-size: 1em;
 		font-weight: 400;
 		line-height: 1.5;
@@ -249,7 +257,7 @@
 
 	.subtitle {
 		color: #cfcfcf;
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		font-weight: 600;
 		line-height: 1.25;
 		word-break: break-word;
