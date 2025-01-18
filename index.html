@@ -120,6 +120,10 @@
 			<div class="block subtitle">
 				Piano Sheets / MIDIs
 			</div>
+			<div class="block">
+				The MIDI player and sheet music visualizer was made by <a
+					href="https://cifkao.github.io/html-midi-player/" target="_blank" rel="noopener">Cifkao</a>!
+			</div>
 
 			<div class="block">
 				<a href="https://www.youtube.com/watch?v=Y03YIJRB_aQ" target="_blank" rel="noopener">
@@ -128,12 +132,23 @@
 						<img src="./external_link.png" class="link invert" />
 					</div>
 				</a>
-				<div class="message-body" style="background-color: #cfcfcf">
-					<midi-visualizer type="staff" id="myStaffVisualizer" src="./Music/Crime and Punishment.mid">
+				<div class="message-body" style="background-color: #cfcfcf;">
+					<midi-visualizer type="staff" id="visualizer0"
+						src="./Music/Crime and Punishment.mid">
 					</midi-visualizer>
-					<midi-player class="centered" src="./Music/Crime and Punishment.mid" sound-font
-						visualizer="#myStaffVisualizer">
-					</midi-player>
+					<div class="container-vertical">
+						<div class="centered-vertical left">
+						<midi-player
+							src="./Music/Crime and Punishment.mid"
+							sound-font visualizer="#visualizer0">
+						</midi-player>
+						</div>
+						<div class="centered-vertical right">
+							<a href="./Music/Crime and Punishment.mid" style="text-align: center; color: #000;">Download
+								MIDI</a>
+							<img src="./external_link.png" class="link" />
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -144,12 +159,23 @@
 						<img src="./external_link.png" class="link invert" />
 					</div>
 				</a>
-				<div class="message-body" style="background-color: #cfcfcf">
-					<midi-visualizer type="staff" id="myStaffVisualizer" src="./Music/Aishite Aishite Aishite.mid">
+				<div class="message-body" style="background-color: #cfcfcf;">
+					<midi-visualizer type="staff" id="visualizer0"
+						src="./Music/Crime and Punishment.mid">
 					</midi-visualizer>
-					<midi-player class="centered" src="./Music/Aishite Aishite Aishite.mid" sound-font
-						visualizer="#myStaffVisualizer">
-					</midi-player>
+					<div class="container-vertical">
+						<div class="centered-vertical left">
+						<midi-player
+							src="./Music/Aishite Aishite Aishite.mid"
+							sound-font visualizer="#visualizer0">
+						</midi-player>
+						</div>
+						<div class="centered-vertical right">
+							<a href="./Music/Aishite Aishite Aishite.mid" style="text-align: center; color: #000;">Download
+								MIDI</a>
+							<img src="./external_link.png" class="link" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -389,9 +415,46 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	.container-vertical {
+		height: 55px;
+		position: relative;
+	}
+
+	.centered-vertical {
+		margin: 0px;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	
+	.right {
+		right: 0px;
+	}
+
+	.left {
+		left: 0px;
+	}
 </style>
 
 <script
 	src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+<script>
+	document.getElementById("visualizer0").config = {
+		noteHeight: 10,
+		noteSpacing: 1,
+		noteRGB: '0, 0, 0',
+		activeNoteRGB: '255, 0, 0',
+		defaultKey: 8,
+	};
+	document.getElementById("visualizer1").config = {
+		noteHeight: 10,
+		noteSpacing: 1,
+		noteRGB: '0, 0, 0',
+		activeNoteRGB: '255, 0, 0',
+		defaultKey: 3,
+	};
+</script>
 
 </html>
