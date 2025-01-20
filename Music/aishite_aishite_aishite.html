@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" href="/favicon.ico">
+	<title>Aishite Aishite Aishite - MIDI</title>
+	<meta name="description" content="Aishite Aishite Aishite - MIDI">
+	<meta name="theme-color" content="#3d3d3d">
+	<meta property="og:title" content="Aishite Aishite Aishite - MIDI">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://yosispring.github.io/">
+	<meta property="og:image" content="https://yosispring.github.io/yosi.png">
+	<meta property="og:description" content="Aishite Aishite Aishite - MIDI">
+	<link rel="stylesheet" href="/stylesheet.css">
+</head>
+
+<body>
+	<img id="background" src="/background3.png">
+	<div class="container centered">
+		<br />
+		<br />
+		<a href="/index.html">
+			<div class="block box">
+				<div class="block centered">
+					<div class="profile-pic">
+						<img class="is-rounded" src="/yosi.png" />
+					</div>
+					<div class="title">
+						Yosi Spring
+					</div>
+				</div>
+			</div>
+		</a>
+		<br />
+		<div class="block box">
+			<div class="block subtitle">
+				Piano Sheets / MIDIs
+			</div>
+			<div class="block box" style="background-color:#1d1d1d;">
+				<div class="block">
+					Here are some MIDI files for songs that I have played on the piano!
+					These do not perfectly match what I played in the video - they just have the important melodic lines
+					and chords.
+				</div>
+				<div class="block">
+					I included a MIDI player and sheet music visualizer
+					(made by <a href="https://cifkao.github.io/html-midi-player/" target="_blank" rel="noopener">Cifkao
+						<img src="/external_link.png" class="link invert" /></a>)
+					for convenience, but you should really download the files if you want to learn the songs.
+					The player might not work on certain browsers or mobile devices.
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="block">
+		<div class="message-header" style="background-color:#777;">
+			<span class="middle">Aishite Aishite Aishite - Ado / Kikuo</span>
+		</div>
+		<div class="message-body" style="background-color: #2d2d2d;">
+			<div class="container centered">
+				<div class="container-vertical">
+					<div class="centered-vertical left">
+						<a href="/Music/aishite_aishite_aishite.mid">
+							<button>
+								Download MIDI
+								<img src="/external_link.png" class="link" />
+							</button>
+						</a>
+					</div>
+					<div class="centered-vertical right">
+						<a href="https://www.youtube.com/watch?v=eCgDv1btzPg" target="_blank" rel="noopener">
+							<button>
+								YouTube Video
+								<img src="/external_link.png" class="link" />
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="block box" style="background-color:#1d1d1d;">
+				<midi-visualizer type="waterfall" id="visualizer" src="/Music/aishite_aishite_aishite.mid">
+				</midi-visualizer>
+				<br />
+				<midi-player src="/Music/aishite_aishite_aishite.mid" sound-font visualizer="#visualizer" id="player">
+				</midi-player>
+			</div>
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+</body>
+
+<script
+	src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+<script src="/Music/music_config.js"></script>
